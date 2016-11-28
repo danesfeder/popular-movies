@@ -15,7 +15,6 @@ public class MovieActivity extends AppCompatActivity {
 
     private MovieAdapter movieAdapter;
     private RecyclerView movieList;
-    private GridLayoutManager layoutManager;
     private ArrayList<MovieInfo> movieInfos;
 
     @Override
@@ -40,16 +39,16 @@ public class MovieActivity extends AppCompatActivity {
 
     private void prepareFakeMovieData() {
         movieInfos = new ArrayList<>();
-        movieInfos.add(new MovieInfo("Fight Club", "https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg"));
-        movieInfos.add(new MovieInfo("Fantastic Beasts", "https://image.tmdb.org/t/p/w500/6I2tPx6KIiBB4TWFiWwNUzrbxUn.jpg"));
-        movieInfos.add(new MovieInfo("Fight Club", "https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg"));
-        movieInfos.add(new MovieInfo("Fight Club", "https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg"));
-        movieInfos.add(new MovieInfo("Fight Club", "https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg"));
-        movieInfos.add(new MovieInfo("Fight Club", "https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg"));
-        movieInfos.add(new MovieInfo("Fight Club", "https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg"));
-        movieInfos.add(new MovieInfo("Fight Club", "https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg"));
-        movieInfos.add(new MovieInfo("Fight Club", "https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg"));
-        movieInfos.add(new MovieInfo("Fight Club", "https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg"));
+        MovieInfo movieInfo1 = new MovieInfo();
+        movieInfo1.setImageUrl("https://image.tmdb.org/t/p/w500/6I2tPx6KIiBB4TWFiWwNUzrbxUn.jpg");
+        movieInfo1.setTitle("Fantastic Beasts and Where to Find Them");
+        movieInfo1.setOverview("In 1926, Newt Scamander arrives at the Magical Congress of the United States of America" +
+                " with a magically expanded briefcase, which houses a number of dangerous creatures and their habitats. " +
+                "When the creatures escape from the briefcase, it sends the American wizarding authorities after Newt, " +
+                "and threatens to strain even further the state of magical and non-magical relations.");
+        movieInfo1.setReleaseDate("2016-10-25");
+        movieInfo1.setVoteAverage(7.2);
+        movieInfos.add(movieInfo1);
     }
 
     @Override

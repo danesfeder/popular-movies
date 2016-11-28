@@ -8,13 +8,8 @@ public class MovieInfo {
     private String title;
     private String imageUrl;
     private String overview;
-    private String voteAverage;
+    private double voteAverage;
     private String releaseDate;
-
-    public MovieInfo(String title, String imageUrl) {
-        this.title = title;
-        this.imageUrl = imageUrl;
-    }
 
     public String getTitle() {
         return title;
@@ -40,11 +35,11 @@ public class MovieInfo {
         this.overview = overview;
     }
 
-    public String getVoteAverage() {
+    public double getVoteAverage() {
         return voteAverage;
     }
 
-    public void setVoteAverage(String voteAverage) {
+    public void setVoteAverage(double voteAverage) {
         this.voteAverage = voteAverage;
     }
 

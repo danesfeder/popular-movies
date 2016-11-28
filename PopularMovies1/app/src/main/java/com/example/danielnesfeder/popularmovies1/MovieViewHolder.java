@@ -1,9 +1,9 @@
 package com.example.danielnesfeder.popularmovies1;
 
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
 
@@ -24,7 +24,8 @@ public class MovieViewHolder extends RecyclerView.ViewHolder {
         movieCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(itemView.getContext(), movieInfo.getTitle(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(view.getContext(), MovieDetailActivity.class);
+                view.getContext().startActivity(intent);
             }
         });
     }
